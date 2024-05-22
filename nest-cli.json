@@ -54,6 +54,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/alarms-generator/tsconfig.app.json"
       }
+    },
+    "alarms-classifier-service": {
+      "type": "application",
+      "root": "apps/alarms-classifier-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/alarms-classifier-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/alarms-classifier-service/tsconfig.app.json"
+      }
     }
   }
 }
