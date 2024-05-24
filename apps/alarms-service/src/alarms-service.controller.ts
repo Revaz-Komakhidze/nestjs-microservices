@@ -8,7 +8,7 @@ export class AlarmsServiceController {
   private readonly logger = new Logger(AlarmsServiceController.name);
 
   constructor(
-    @Inject(MESSAGE_BROKER) private readonly messageBroker: ClientProxy, // 👈
+    @Inject(MESSAGE_BROKER) private readonly messageBroker: ClientProxy,
   ) {}
 
   @EventPattern('alarm.created')

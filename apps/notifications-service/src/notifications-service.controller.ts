@@ -5,7 +5,7 @@ import { EventPattern, Payload } from '@nestjs/microservices';
 export class NotificationsServiceController {
   private readonly logger = new Logger(NotificationsServiceController.name);
 
-  @EventPattern('notification.send') // 👈
+  @EventPattern('notification.send')
   sendNotification(@Payload() data: unknown) {
     this.logger.debug(
       `Sending notification about the alarm: ${JSON.stringify(data)}`,
