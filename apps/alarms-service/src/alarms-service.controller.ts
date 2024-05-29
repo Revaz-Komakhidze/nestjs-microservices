@@ -8,9 +8,9 @@ export class AlarmsServiceController {
   private readonly logger = new Logger(AlarmsServiceController.name);
 
   constructor(
-    @Inject(NATS_MESSAGE_BROKER) // 👈
+    @Inject(NATS_MESSAGE_BROKER)
     private readonly natsMessageBroker: ClientProxy,
-    @Inject(NOTIFICATIONS_SERVICE) // 👈
+    @Inject(NOTIFICATIONS_SERVICE)
     private readonly notificationsService: ClientProxy,
   ) {}
 
@@ -29,7 +29,6 @@ export class AlarmsServiceController {
     );
 
     const notify$ = this.notificationsService.emit('notification.send', {
-      // 👈
       alarm: data,
       category: alarmClassification.category,
     });
