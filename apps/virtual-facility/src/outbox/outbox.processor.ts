@@ -24,7 +24,6 @@ export class OutboxProcessor {
    * This method will be executed every 10 seconds.
    * Production-ready applications should use a more reasonable interval.
    * Also, in the real-world system, we would rather use "@nestjs/bull" instead of "@nestjs/schedule"
-   * because it provides more sophisticated features (e.g. locking, supports multiple nodes running in parallel etc.).
    */
   @Cron(CronExpression.EVERY_10_SECONDS)
   async processOutboxMessages() {
